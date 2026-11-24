@@ -13,3 +13,11 @@ target_compile_features(CoffeeBean
     PUBLIC
         cxx_std_23
 )
+
+find_package(SFML CONFIG REQUIRED COMPONENTS System Window)
+
+target_link_libraries(CoffeeBean
+    PUBLIC
+        SFML::System
+        SFML::Window
+)
